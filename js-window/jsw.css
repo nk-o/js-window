@@ -1,0 +1,270 @@
+/*!
+ * Name    : JS Window [JSW]
+ * Version : 1.0.0
+ * Author  : _nK http://nkdev.info
+ * GitHub  : https://github.com/nk-o/js-window
+ */
+.jsw {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    background-color: #fff;
+    -webkit-box-shadow: 0 8px 50px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 50px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.jsw,
+.jsw:after,
+.jsw:before,
+.jsw *,
+.jsw *:after,
+.jsw *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.jsw .jsw-content,
+.jsw .jsw-head,
+.jsw-table-row > div,
+.jsw-table-row-scroll > div > div {
+    padding: 15px;
+}
+
+/* 
+ * Table
+ */
+.jsw-table {
+    display: table;
+    width: 100%;
+}
+.jsw-table-row {
+    display: table-row;
+    width: 100%;
+}
+.jsw-table-row > div {
+    position: relative;
+}
+.jsw-table-row-scroll {
+    height: 100%;
+}
+.jsw-table-row-scroll > div {
+    height: 100%;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.jsw-table-row-scroll > div > div {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+}
+
+/* 
+ * Show / Hide
+ */
+.jsw.jsw-show {
+    display: block;
+}
+.jsw.jsw-table.jsw-show {
+    display: table;
+}
+.jsw.jsw-hide,
+.jsw.jsw-table.jsw-hide {
+    display: none;
+}
+
+/* 
+ * Content
+ */
+.jsw .jsw-content {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* 
+ * Head
+ */
+.jsw .jsw-head {
+    cursor: default;
+    font-size: 20px;
+    background-color: #0991E0;
+    color: #fff;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.jsw .jsw-title {
+    display: inline;
+}
+
+/* 
+ * Controls
+ */
+.jsw-controls {
+    display: inline-block;
+    float: right;
+    height: 30px;
+}
+.jsw-controls .jsw-control {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+.jsw-controls .jsw-control:after,
+.jsw-controls .jsw-control:before {
+    position: absolute;
+    content: '';
+    background-color: #fff;
+}
+
+/* close icon */
+.jsw-controls .jsw-control.jsw-control-close:after,
+.jsw-controls .jsw-control.jsw-control-close:before {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.jsw-controls .jsw-control.jsw-control-close:after {
+    width: 20px;
+    height: 2px;
+}
+.jsw-controls .jsw-control.jsw-control-close:before {
+    height: 20px;
+    width: 2px;
+}
+
+/* minimize icon */
+.jsw-controls .jsw-control.jsw-control-minimize:after {
+    width: 16px;
+    height: 2px;
+    left: 7px;
+    bottom: 7px;
+}
+
+/* maximize icon */
+.jsw-controls .jsw-control.jsw-control-maximize:after {
+    width: 16px;
+    height: 16px;
+    top: 7px;
+    left: 7px;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+}
+
+/* maximized */
+.jsw.jsw-maximized {
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* minimized */
+.jsw.jsw-minimized {
+    height: 0 !important;
+}
+
+/*
+ * Draggable + Resizable
+ */
+.jsw.jsw-resizable-started,
+.jsw.jsw-draggable-started,
+.jsw .jsw-draggable,
+.jsw .jsw-resizable-n,
+.jsw .jsw-resizable-e,
+.jsw .jsw-resizable-w,
+.jsw .jsw-resizable-s,
+.jsw .jsw-resizable-nw,
+.jsw .jsw-resizable-ne,
+.jsw .jsw-resizable-sw,
+.jsw .jsw-resizable-se {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+/*
+ * Resizable
+ */
+/* top resize */
+.jsw .jsw-resizable-n {
+    position: absolute;
+    cursor: n-resize;
+    top: -8px;
+    left: 0;
+    right: 0;
+    height: 10px;
+}
+/* right resize */
+.jsw .jsw-resizable-e {
+    position: absolute;
+    cursor: e-resize;
+    top: 0;
+    right: -8px;
+    bottom: 0;
+    width: 10px;
+}
+/* left resize */
+.jsw .jsw-resizable-w {
+    position: absolute;
+    cursor: w-resize;
+    top: 0;
+    left: -8px;
+    bottom: 0;
+    width: 10px;
+}
+/* bottom resize */
+.jsw .jsw-resizable-s {
+    position: absolute;
+    cursor: s-resize;
+    bottom: -8px;
+    right: 0;
+    left: 0;
+    height: 10px;
+}
+/* top left resize */
+.jsw .jsw-resizable-nw {
+    position: absolute;
+    cursor: nw-resize;
+    top: -7px;
+    left: -7px;
+    height: 15px;
+    width: 15px;
+}
+/* top right resize */
+.jsw .jsw-resizable-ne {
+    position: absolute;
+    cursor: ne-resize;
+    top: -7px;
+    right: -7px;
+    height: 15px;
+    width: 15px;
+}
+/* bottom left resize */
+.jsw .jsw-resizable-sw {
+    position: absolute;
+    cursor: sw-resize;
+    bottom: -7px;
+    left: -7px;
+    height: 15px;
+    width: 15px;
+}
+/* bottom right resize */
+.jsw .jsw-resizable-se {
+    position: absolute;
+    cursor: se-resize;
+    bottom: -7px;
+    right: -7px;
+    height: 15px;
+    width: 15px;
+}

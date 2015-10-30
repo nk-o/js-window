@@ -1,0 +1,23 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 40px;
+    line-height: 1.5;
+    max-width: 1000px;
+}
+
+pre {
+    white-space: pre-wrap;
+    background-color: #F5F5F5;
+    border: 1px solid #E2E2E2;
+    border-radius: 3px;
+    padding: 20px;
+}
+
+.jsw .jsw-content h2 {
+    margin-top: 0;
+}
+.jsw .jsw-content p {
+    margin-bottom: 0;
+}

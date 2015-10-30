@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS Window</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+    <!-- JSW -->
+    <link href='../js-window/jsw.css' rel='stylesheet' type='text/css'>
+    <script src="../js-window/jsw.js"></script>
+    <!--[if lte IE 8]>
+    <link href='../js-window/jsw-ie.css' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- Demo Styles -->
+    <link href='css/demo.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+    <h1>JS Window</h1>
+    <h2>Javascript window like plugin. No dependencies.</h2>
+
+    <a class="github-button" href="https://github.com/nk-o/js-window" data-style="mega" data-count-href="/nk-o/js-window/stargazers" data-count-api="/repos/nk-o/js-window#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star nk-o/js-window on GitHub">Star</a>
+    <a class="github-button" href="https://github.com/nk-o/js-window/archive/master.zip" data-style="mega" aria-label="Download nk-o/js-window on GitHub">Download</a>
+    <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+    <h3>Simple usage</h3>
+    <script type="text/javascript">
+        var myWindow1 = JSW({
+            title: 'Simple Window',
+            x: 300,
+            y: 300,
+            content: '<h2>Fusce Imperdiet Lectus</h2><p>Commodo. Class torquent mi Ipsum ultrices tincidunt convallis placerat augue, mauris per taciti consectetuer lectus hymenaeos aliquet dictumst fermentum eros, tristique gravida tristique natoque sem ligula viverra venenatis facilisis taciti fusce a quis aliquam ultricies venenatis. Odio integer. Orci nec. Vulputate facilisis consequat dui. Faucibus per. Nullam bibendum <em>taciti</em> fermentum.</p>'
+        });
+        myWindow1.show();
+    </script>
+    <pre>
+&lt;script>
+    var myWindow1 = JSW({
+        title: 'Simple Window',
+        content: '&lt;h2>Fusce Imperdiet Lectus&lt;/h2>&lt;p>Commodo. Class torquent mi Ipsum ultrices tincidunt convallis placerat augue, mauris per taciti consectetuer lectus hymenaeos aliquet dictumst fermentum eros, tristique gravida tristique natoque sem ligula viverra venenatis facilisis taciti fusce a quis aliquam ultricies venenatis. Odio integer. Orci nec. Vulputate facilisis consequat dui. Faucibus per. Nullam bibendum &lt;em>taciti&lt;/em> fermentum.&lt;/p>'
+    });
+    myWindow1.show();
+&lt;/script></pre>
+
+
+    <h3>Methods usage</h3>
+    <script type="text/javascript">
+        var myWindow2 = JSW({
+            title: 'Methods Window',
+            position: 'fixed',
+            x: 100,
+            y: 100,
+            content: '<h2>Fusce Imperdiet Lectus</h2><p>Commodo. Class torquent mi Ipsum ultrices tincidunt convallis placerat augue, mauris per taciti consectetuer lectus hymenaeos aliquet dictumst fermentum eros, tristique gravida tristique natoque sem ligula viverra venenatis facilisis taciti fusce a quis aliquam ultricies venenatis. Odio integer. Orci nec. Vulputate facilisis consequat dui. Faucibus per. Nullam bibendum <em>taciti</em> fermentum.</p>'
+        });
+    </script>
+    <button onclick="myWindow2.show()">Show</button>
+    <button onclick="myWindow2.hide()">Hide</button>
+    <button onclick="myWindow2.minimize()">Minimize</button>
+    <button onclick="myWindow2.maximize()">maximize</button>
+    
+    <br>
+    <input type="text" value="Methods Window" id="window2title">
+    <button onclick="myWindow2.setTitle(document.getElementById('window2title').value)">set title</button>
+    <pre>
+&lt;script type="text/javascript">
+    var myWindow2 = JSW({
+        title: 'Methods Window',
+        position: 'fixed',
+        x: 100,
+        y: 100,
+        content: '&lt;h2>Fusce Imperdiet Lectus&lt;/h2>&lt;p>Commodo. Class torquent mi Ipsum ultrices tincidunt convallis placerat augue, mauris per taciti consectetuer lectus hymenaeos aliquet dictumst fermentum eros, tristique gravida tristique natoque sem ligula viverra venenatis facilisis taciti fusce a quis aliquam ultricies venenatis. Odio integer. Orci nec. Vulputate facilisis consequat dui. Faucibus per. Nullam bibendum &lt;em>taciti&lt;/em> fermentum.&lt;/p>'
+    });
+&lt;/script>
+&lt;button onclick="myWindow2.show()">Show&lt;/button>
+&lt;button onclick="myWindow2.hide()">Hide&lt;/button>
+&lt;button onclick="myWindow2.minimize()">Minimize&lt;/button>
+&lt;button onclick="myWindow2.maximize()">maximize&lt;/button>
+
+&lt;br>
+&lt;input type="text" value="Methods Window" id="window2title">
+&lt;button onclick="myWindow2.setTitle(document.getElementById('window2title').value)">set title&lt;/button></pre>
+
+</body>
+</html>

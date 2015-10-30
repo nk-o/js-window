@@ -1,0 +1,24 @@
+{
+    "name": "JS Window",
+    "main": ["js-window/jsw.js"],
+    "version": "1.0.0",
+    "homepage": "https://github.com/nk-o/js-window",
+    "authors": [
+        "_nK <nkdevinfo@gmail.com>"
+    ],
+    "description": "JS Window like plugin. No dependencies",
+    "keywords": [
+        "window",
+        "js window",
+        "javascript window",
+        "window like"
+    ],
+    "license": "WTFPL",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ]
+}
