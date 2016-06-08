@@ -1,7 +1,7 @@
 /*!
  * Name    : JS Window [JSW]
  * Version : 1.0.0
- * Author  : _nK http://nkdev.info
+ * Author  : _nK https://nkdev.info
  * GitHub  : https://github.com/nk-o/js-window
  */
 .jsw {
@@ -34,7 +34,7 @@
     padding: 15px;
 }
 
-/* 
+/*
  * Table
  */
 .jsw-table {
@@ -62,7 +62,7 @@
     top: 0; left: 0; right: 0; bottom: 0;
 }
 
-/* 
+/*
  * Show / Hide
  */
 .jsw.jsw-show {
@@ -76,7 +76,7 @@
     display: none;
 }
 
-/* 
+/*
  * Content
  */
 .jsw .jsw-content {
@@ -84,7 +84,7 @@
     overflow-y: auto;
 }
 
-/* 
+/*
  * Head
  */
 .jsw .jsw-head {
@@ -99,7 +99,7 @@
     display: inline;
 }
 
-/* 
+/*
  * Controls
  */
 .jsw-controls {

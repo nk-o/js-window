@@ -1,7 +1,7 @@
 /*!
  * Name    : JS Window [JSW]
  * Version : 1.0.0
- * Author  : _nK http://nkdev.info
+ * Author  : _nK https://nkdev.info
  * GitHub  : https://github.com/nk-o/js-window
  */
 (function () {
@@ -132,7 +132,7 @@
         } else if (element.detachEvent) {
             element.detachEvent('on' + event, func);
         } else {
-            element['on' + event] = null; 
+            element['on' + event] = null;
         }
     };
 
@@ -196,11 +196,11 @@
         mouseMove(function (e) {
             if (dragstart) {
                 e = e || window.event; // IE compatibility
-                if (e.preventDefault) {  
-                    e.preventDefault();  
-                } else {  
-                    e.returnValue = false;  
-                    e.cancelBubble=true;  
+                if (e.preventDefault) {
+                    e.preventDefault();
+                } else {
+                    e.returnValue = false;
+                    e.cancelBubble=true;
                 }
 
                 if (dragstart === 1) {
@@ -619,7 +619,7 @@
                     startPosition = self.getPosition();
                     addClass(self.jswItem, 'jsw-draggable-started');
                     self.callEvent('onDragStart', e);
-                }, 
+                },
                 function dragMove (e) {
                     var pageX = (e.touches && e.touches[0] ? e.touches[0] : e ).screenX;
                     var pageY = (e.touches && e.touches[0] ? e.touches[0] : e ).screenY;
@@ -813,7 +813,7 @@
         function scroll (e) {
             e.preventDefault();
 
-            if ((e.target === self.$content[0]) || 
+            if ((e.target === self.$content[0]) ||
                 (e.target && e.target.offsetParent && e.target.offsetParent === self.$content[0])) {
                 var scrollTo = null;
 

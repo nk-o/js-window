@@ -1,5 +1,5 @@
 # JS Window
-Javascript window like plugin. No dependencies. [http://free.nkdev.info/js-window/](http://free.nkdev.info/js-window/)
+Javascript window like plugin. No dependencies. [https://free.nkdev.info/js-window/](https://free.nkdev.info/js-window/)
 
 ## Getting Started
 Include JSW plugin and styles
